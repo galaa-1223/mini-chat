@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        />
+        <title>Game</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="title">
+                <button id="logoutButton"> Garah</button>
+            </header>
+
+            <section id="loginForm" style="display: block;">
+                <p><span id="userNumber">0</span> hereglegchiin too</p>
+                <p id="loginAlert">Ner</p>
+                <p>
+                    <input type="text" id="nameInput" placeholder="user name ..." />
+                    <input type="button" id="loginButton" value="nevtreh" />
+                </p>
+            </section>
+
+            <section id="room" style="display: none;">
+                <header id="roomHeader">
+                    <div id="userList"><span>Users:</span></div>
+                </header>
+                <section id="messages"></section>
+                <section id="inputs">
+                    <input type="button" id="messageSubmit" value="send" />
+                    <input type="text" id="messageInput" placeholder="Too shid" />
+                </section>
+            </section>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="./client.js"></script>
+    </body>
+</html>
